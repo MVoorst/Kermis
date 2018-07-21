@@ -20,9 +20,11 @@ public class Spin extends Attractie{
 		return this.aantalKaartjes;
 	}
 	
-	public void setKaartjes(int sk) {
-		aantalKaartjes = aantalKaartjes + sk;
+	public int setKaartjes(int sk) {
+		this.aantalKaartjes = aantalKaartjes + sk;
+		return this.aantalKaartjes;
 	}
+	
 	public void draaien() {
 		System.out.println("De attractie Spin draait!");
 	}

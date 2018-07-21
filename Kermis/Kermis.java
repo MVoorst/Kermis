@@ -3,7 +3,7 @@ package Kermis;
 import java.util.Scanner;
 
 public class Kermis {
-	Attractie[] attracties;
+	static Attractie[] attracties;
 	static Kassa kassa;
 	
 	Kermis() {
@@ -29,15 +29,10 @@ public class Kermis {
         if (keuzeVoorAttractie > attracties.length - 1) {
             System.out.println("Dit is niet bekend.");
         } else {
-        	System.out.println("U heeft gekozen voor de " + attracties[keuzeVoorAttractie].getNaam()); 
+        	System.out.println("U heeft gekozen voor de " + attracties[keuzeVoorAttractie].getNaam() + " met " + keuzeVoorPersonen+ " perso(o)n(en)."); 
         	kassa.omzet(attracties[keuzeVoorAttractie].getPrijs(), keuzeVoorPersonen);
-        	
         	attracties[keuzeVoorAttractie].setKaartjes(keuzeVoorPersonen);
         	kassa.aantalKaartjesBerekenen(attracties[0], attracties[1], attracties[2], attracties[3], attracties[4], attracties[5]);
-        	System.out.println(attracties[keuzeVoorAttractie].getKaartjes());
-        	
-        	//System.out.println(attracties[keuzeVoorAttractie].aantalKaartjes); // gaat niet want hij pakt niet de waarde van de child, maar de parent
-        	System.out.println(attracties[keuzeVoorAttractie].getPrijs());
         	attracties[keuzeVoorAttractie].draaien();
         }
        
@@ -47,7 +42,7 @@ public class Kermis {
 		Kermis kermis = new Kermis();
 		int i = 0;
 		do {
-		kassa.menuKiezen(kermis);
+		kassa.menuKiezen(kermis,attracties);
 		i++;
 		}while (i<100);
 		

@@ -5,7 +5,6 @@ public class Hawaii extends Attractie{
 	static double prijs = 2.90; 
 	int aantalKaartjes;
 	
-	
 	public Hawaii() {
 		this.naam = "Hawaii";
 	}
@@ -22,8 +21,9 @@ public class Hawaii extends Attractie{
 	public int getKaartjes() {
 		return this.aantalKaartjes;
 	}
-	public void setKaartjes(int sk) {
-		aantalKaartjes = aantalKaartjes + sk;
-	}
 	
+	public int setKaartjes(int sk) {
+		this.aantalKaartjes = aantalKaartjes + sk;
+		return this.aantalKaartjes;
+	}
 }

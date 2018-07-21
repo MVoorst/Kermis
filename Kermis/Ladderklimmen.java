@@ -25,7 +25,8 @@ public class Ladderklimmen extends Attractie{
 		return this.prijs;
 	}
 
-	public void setKaartjes(int sk) {
-		aantalKaartjes = aantalKaartjes + sk;
+	public int setKaartjes(int sk) {
+		this.aantalKaartjes = aantalKaartjes + sk;
+		return this.aantalKaartjes;
 	}
 }

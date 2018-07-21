@@ -20,8 +20,9 @@ public class Spookhuis extends Attractie{
 		return this.aantalKaartjes;
 	}
 	
-	public void setKaartjes(int sk) {
-		aantalKaartjes = aantalKaartjes + sk;
+	public int setKaartjes(int sk) {
+		this.aantalKaartjes = aantalKaartjes + sk;
+		return this.aantalKaartjes;
 	}
 	
 	public void draaien() {

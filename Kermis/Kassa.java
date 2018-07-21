@@ -6,33 +6,31 @@ public class Kassa {
 	static double standVanZaken;
 	static int aantalKaartjes;
 	
-	public int aantalKaartjesBerekenen(Attractie nul, Attractie een, Attractie twee,Attractie drie, Attractie vier, Attractie vijf) {
+	public static int aantalKaartjesBerekenen(Attractie nul, Attractie een, Attractie twee,Attractie drie, Attractie vier, Attractie vijf) {
+		//System.out.println(nul.getKaartjes() + een.getKaartjes() + twee.getKaartjes() + drie.getKaartjes() + vier.getKaartjes() + vijf.getKaartjes());
 		int aantalKaartjesB = nul.getKaartjes() + een.getKaartjes() + twee.getKaartjes() + drie.getKaartjes() + vier.getKaartjes() + vijf.getKaartjes(); 
+		//System.out.println("Botsautos: " + nul.getKaartjes() + "\nSpin: " + een.getKaartjes() + "\nSpiegelPaleis: " + twee.getKaartjes() +"\nSpookhuis: " + drie.getKaartjes() + "\nHawaii: " + vier.getKaartjes() + "\nLadderKlimmen: " + vijf.getKaartjes());
 		return aantalKaartjes + aantalKaartjesB;
 	}
 
 	public double omzet (double prijsAttractie, int keuzeVP) {
 		double omzet = prijsAttractie * keuzeVP;
-		System.out.println(omzet);
 		standVanZaken = omzet + standVanZaken;
 		return omzet;
 	}
 	
 
-	public static void menuKiezen (Kermis km) {
+	public static void menuKiezen (Kermis km, Attractie[] arr2) {
 		System.out.println("Typ [o] voor de omzet, typ [k] voor aantal kaartjes verkocht. Typ [v] voor verkoop.");
 		Scanner sc = new Scanner(System.in);
 		String check = sc.nextLine();
 		switch (check) {
 		case "o" : 
 			System.out.println("De totale omzet is " + standVanZaken + " euro.");
-			//moet het onderstaande menu nog ff fixen
-			System.out.println("Botsautos:" );
 			break;
 		case "k" :
-			System.out.println("Het totale aantal kaartjes verkocht is: " + aantalKaartjes);
-			//moet ook dit onderstaande menu nog ff fixen
-			System.out.println("Botsautos:" );
+			System.out.println("Het totale aantal kaartjes verkocht is: " + aantalKaartjesBerekenen(arr2[0], arr2[1], arr2[2],arr2[3],arr2[4], arr2[5]));
+			System.out.println("Botsautos: " + arr2[0].getKaartjes() + "\nSpin: " + arr2[1].getKaartjes() + "\nSpiegelPaleis: " + arr2[2].getKaartjes() +"\nSpookhuis: " + arr2[3].getKaartjes() + "\nHawaii: " + arr2[4].getKaartjes() + "\nLadderKlimmen: " + arr2[5].getKaartjes());
 			break;
 		case "v" :
 			System.out.println("Verkoop");

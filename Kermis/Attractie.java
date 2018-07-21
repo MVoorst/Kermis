@@ -7,7 +7,7 @@ public abstract class Attractie {
 	static double prijs;
 	static int aantalKaartjes;
 	
-	public abstract void setKaartjes(int sk);
+	public abstract int setKaartjes(int sk);
 	
 	public int getKaartjes() {
 		return this.aantalKaartjes;
