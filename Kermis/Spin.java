@@ -4,7 +4,7 @@ public class Spin extends Attractie{
 	private String naam;
 	private double prijs = 2.25; 
 	double oppervlakte = 21;
-	private int aantalKaartjes;
+	int aantalKaartjes;
 	
 	public Spin() {
 		this.naam = "Spin";
@@ -16,10 +16,13 @@ public class Spin extends Attractie{
 		return this.prijs;
 	}
 	
-	public double getKaartjes() {
+	public int getKaartjes() {
 		return this.aantalKaartjes;
 	}
 	
+	public void setKaartjes(int sk) {
+		aantalKaartjes = aantalKaartjes + sk;
+	}
 	public void draaien() {
 		System.out.println("De attractie Spin draait!");
 	}

@@ -4,6 +4,7 @@ public class Ladderklimmen extends Attractie{
 	private String naam;
 	static double prijs = 5.00; 
 	double oppervlakte = 5;
+	int aantalKaartjes;
 	
 	public Ladderklimmen() {
 		this.naam = "Ladderklimmen";
@@ -13,7 +14,7 @@ public class Ladderklimmen extends Attractie{
 		return this.naam;
 	}
 	
-	public double getKaartjes() {
+	public int getKaartjes() {
 		return this.aantalKaartjes;
 	}
 	
@@ -22,5 +23,9 @@ public class Ladderklimmen extends Attractie{
 	}
 	public double getPrijs() {
 		return this.prijs;
+	}
+
+	public void setKaartjes(int sk) {
+		aantalKaartjes = aantalKaartjes + sk;
 	}
 }

@@ -5,7 +5,13 @@ public abstract class Attractie {
 	int counter; 
 	double oppervlakte;
 	static double prijs;
-	private int aantalKaartjes;
+	static int aantalKaartjes;
+	
+	public abstract void setKaartjes(int sk);
+	
+	public int getKaartjes() {
+		return this.aantalKaartjes;
+	}
 	
 	public double getPrijs() {
 		return this.prijs;

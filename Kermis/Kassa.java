@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class Kassa {
 	static double standVanZaken;
 	static int aantalKaartjes;
+	
+	public int aantalKaartjesBerekenen(Attractie nul, Attractie een, Attractie twee,Attractie drie, Attractie vier, Attractie vijf) {
+		int aantalKaartjesB = nul.getKaartjes() + een.getKaartjes() + twee.getKaartjes() + drie.getKaartjes() + vier.getKaartjes() + vijf.getKaartjes(); 
+		return aantalKaartjes + aantalKaartjesB;
+	}
 
 	public double omzet (double prijsAttractie, int keuzeVP) {
 		double omzet = prijsAttractie * keuzeVP;

@@ -1,9 +1,10 @@
 package Kermis;
 
 public class Hawaii extends Attractie{
-	private String naam = "Spin";
+	private String naam;
 	static double prijs = 2.90; 
-	private int aantalKaartjes;
+	int aantalKaartjes;
+	
 	
 	public Hawaii() {
 		this.naam = "Hawaii";
@@ -14,9 +15,15 @@ public class Hawaii extends Attractie{
 	public void draaien() {
 		System.out.println("De attractie Hawaii draait!");
 	}
-	@Override
+	
 	public double getPrijs() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.prijs;
 	}
+	public int getKaartjes() {
+		return this.aantalKaartjes;
+	}
+	public void setKaartjes(int sk) {
+		aantalKaartjes = aantalKaartjes + sk;
+	}
+	
 }

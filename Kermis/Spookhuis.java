@@ -4,7 +4,7 @@ public class Spookhuis extends Attractie{
 	private String naam;
 	static double prijs = 3.20;
 	double oppervlakte = 22;
-	private int aantalKaartjes;
+	int aantalKaartjes;
 	
 	public Spookhuis() {
 		this.naam = "Spookhuis";
@@ -15,8 +15,13 @@ public class Spookhuis extends Attractie{
 	public double getPrijs() {
 		return this.prijs;
 	}
-	public double getKaartjes() {
+	
+	public int getKaartjes() {
 		return this.aantalKaartjes;
+	}
+	
+	public void setKaartjes(int sk) {
+		aantalKaartjes = aantalKaartjes + sk;
 	}
 	
 	public void draaien() {

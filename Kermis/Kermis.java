@@ -31,6 +31,12 @@ public class Kermis {
         } else {
         	System.out.println("U heeft gekozen voor de " + attracties[keuzeVoorAttractie].getNaam()); 
         	kassa.omzet(attracties[keuzeVoorAttractie].getPrijs(), keuzeVoorPersonen);
+        	
+        	attracties[keuzeVoorAttractie].setKaartjes(keuzeVoorPersonen);
+        	kassa.aantalKaartjesBerekenen(attracties[0], attracties[1], attracties[2], attracties[3], attracties[4], attracties[5]);
+        	System.out.println(attracties[keuzeVoorAttractie].getKaartjes());
+        	
+        	//System.out.println(attracties[keuzeVoorAttractie].aantalKaartjes); // gaat niet want hij pakt niet de waarde van de child, maar de parent
         	System.out.println(attracties[keuzeVoorAttractie].getPrijs());
         	attracties[keuzeVoorAttractie].draaien();
         }
@@ -39,13 +45,11 @@ public class Kermis {
 	
 	public static void main (String [] args) {
 		Kermis kermis = new Kermis();
+		int i = 0;
+		do {
 		kassa.menuKiezen(kermis);
-/*        Scanner sc = new Scanner(System.in);
-        System.out.println("Welkom bij KermisKassa 3000! \nU heeft de keuze uit de onderstaande keuzes: \n0 -- Botsauto's \n1 -- Spin \n2 -- Spiegelpaleis \n3 -- Spookhuis \n4 -- Hawaii \n5 -- Ladderklimmen \nVoer Uw Keuze in:");
-        int keuzeVoorAttractie = sc.nextInt();
-        System.out.println("Hoeveel personen willen in de attractie?");
-        int keuzeVoorPersonen = sc.nextInt();
-        kermis.ticketGekocht(keuzeVoorAttractie, keuzeVoorPersonen);
-  */
+		i++;
+		}while (i<100);
+		
 	}
 }
