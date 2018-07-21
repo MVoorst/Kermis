@@ -1,11 +1,26 @@
 package Kermis;
 
 public class Ladderklimmen extends Attractie{
-	String naam = "Ladderklimmen";
+	private String naam;
 	static double prijs = 5.00; 
 	double oppervlakte = 5;
 	
+	public Ladderklimmen() {
+		this.naam = "Ladderklimmen";
+	}
+	
+	public String getNaam() {
+		return this.naam;
+	}
+	
+	public double getKaartjes() {
+		return this.aantalKaartjes;
+	}
+	
 	public void draaien() {
 		System.out.println("De attractie Ladderklimmen draait!");
+	}
+	public double getPrijs() {
+		return this.prijs;
 	}
 }

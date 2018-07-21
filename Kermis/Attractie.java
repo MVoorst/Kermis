@@ -4,7 +4,14 @@ public abstract class Attractie {
 	String naam;
 	int counter; 
 	double oppervlakte;
-	abstract double getPrijs();
+	static double prijs;
+	private int aantalKaartjes;
+	
+	public double getPrijs() {
+		return this.prijs;
+	}
+	
 	
 	public void draaien() {}
+	public abstract String getNaam();
 }
