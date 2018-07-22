@@ -7,20 +7,20 @@ public class Kermis {
 	static Kassa kassa;
 	
 	Kermis() {
-        Botsautos botsauto = new Botsautos();
-        Spin spin = new Spin();
+        Attractie botsauto = new Botsautos();
+        RisicoRijkeAttracties spin = new Spin();
         Attractie spiegelpaleis = new Spiegelpaleis();
         Attractie spookhuis = new Spookhuis();
-        Attractie hawaii = new Hawaii();
+        RisicoRijkeAttracties hawaii = new Hawaii();
         Attractie ladderklimmen = new Ladderklimmen();
         kassa = new Kassa();
 
         attracties = new Attractie[6];
         attracties[0] = botsauto;
-        attracties[1] = spin;
+        attracties[1] = (Attractie) spin;
         attracties[2] = spiegelpaleis;
         attracties[3] = spookhuis;
-        attracties[4] = hawaii;
+        attracties[4] = (Attractie) hawaii;
         attracties[5] = ladderklimmen;
 	}
 	
@@ -33,7 +33,8 @@ public class Kermis {
         	kassa.omzet(attracties[keuzeVoorAttractie].getPrijs(), keuzeVoorPersonen);
         	attracties[keuzeVoorAttractie].setKaartjes(keuzeVoorPersonen);
         	kassa.aantalKaartjesBerekenen(attracties[0], attracties[1], attracties[2], attracties[3], attracties[4], attracties[5]);
-        	attracties[keuzeVoorAttractie].draaien();
+         	attracties[keuzeVoorAttractie].draaien();
+         	System.out.println(attracties[keuzeVoorAttractie].getDraaien());
         }
        
     }

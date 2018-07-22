@@ -5,6 +5,7 @@ public class Botsautos extends Attractie{
 	private static final double prijs = 2.50; 
 	double oppervlakte = 21;
 	int aantalKaartjes;
+	int aantalKeerGedraaid;
 	
 	public Botsautos() {
 		this.naam = "Botsautos";
@@ -21,8 +22,13 @@ public class Botsautos extends Attractie{
 		return this.aantalKaartjes;
 	}
 	
-	public void draaien() {
+	public int draaien() {
 		System.out.println("De attractie Botsauto's draait!");
+		return this.aantalKeerGedraaid++;
+	}
+	
+	public int getDraaien() {
+		return this.aantalKeerGedraaid;
 	}
 	
 	public double getPrijs() {

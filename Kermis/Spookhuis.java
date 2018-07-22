@@ -5,6 +5,7 @@ public class Spookhuis extends Attractie{
 	static double prijs = 3.20;
 	double oppervlakte = 22;
 	int aantalKaartjes;
+	int aantalKeerGedraaid;
 	
 	public Spookhuis() {
 		this.naam = "Spookhuis";
@@ -25,8 +26,13 @@ public class Spookhuis extends Attractie{
 		return this.aantalKaartjes;
 	}
 	
-	public void draaien() {
+	public int draaien() {
 		System.out.println("De attractie Spookhuis draait!");
+		return this.aantalKeerGedraaid++;
+	}
+	
+	public int getDraaien() {
+		return this.aantalKeerGedraaid;
 	}
 	
 }

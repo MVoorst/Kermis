@@ -6,6 +6,7 @@ public abstract class Attractie {
 	double oppervlakte;
 	static double prijs;
 	static int aantalKaartjes;
+	int aantalKeerGedraaid;
 	
 	public abstract int setKaartjes(int sk);
 	
@@ -16,8 +17,12 @@ public abstract class Attractie {
 	public double getPrijs() {
 		return this.prijs;
 	}
+
+	public abstract int draaien();
 	
+	public int getDraaien() {
+		return this.aantalKeerGedraaid;
+	}
 	
-	public void draaien() {}
 	public abstract String getNaam();
 }

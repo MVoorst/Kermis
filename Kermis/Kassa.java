@@ -5,11 +5,10 @@ import java.util.Scanner;
 public class Kassa {
 	static double standVanZaken;
 	static int aantalKaartjes;
+	static double reservering = Ladderklimmen.reservering;
 	
 	public static int aantalKaartjesBerekenen(Attractie nul, Attractie een, Attractie twee,Attractie drie, Attractie vier, Attractie vijf) {
-		//System.out.println(nul.getKaartjes() + een.getKaartjes() + twee.getKaartjes() + drie.getKaartjes() + vier.getKaartjes() + vijf.getKaartjes());
 		int aantalKaartjesB = nul.getKaartjes() + een.getKaartjes() + twee.getKaartjes() + drie.getKaartjes() + vier.getKaartjes() + vijf.getKaartjes(); 
-		//System.out.println("Botsautos: " + nul.getKaartjes() + "\nSpin: " + een.getKaartjes() + "\nSpiegelPaleis: " + twee.getKaartjes() +"\nSpookhuis: " + drie.getKaartjes() + "\nHawaii: " + vier.getKaartjes() + "\nLadderKlimmen: " + vijf.getKaartjes());
 		return aantalKaartjes + aantalKaartjesB;
 	}
 
@@ -40,6 +39,7 @@ public class Kassa {
 	        System.out.println("Hoeveel personen willen in de attractie?");
 	        int keuzeVoorPersonen = sc1.nextInt();
 	        km.ticketGekocht(keuzeVoorAttractie, keuzeVoorPersonen);
+	       
 	  
 		}
 	}

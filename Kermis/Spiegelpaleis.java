@@ -5,6 +5,7 @@ public class Spiegelpaleis extends Attractie{
 	static double prijs = 2.75; 
 	double oppervlakte = 25;
 	int aantalKaartjes;
+	int aantalKeerGedraaid;
 	
 	public Spiegelpaleis() {
 		this.naam = "Spiegelpaleis";
@@ -24,8 +25,12 @@ public class Spiegelpaleis extends Attractie{
 		return this.aantalKaartjes;
 	}
 	
-	public void draaien() {
+	public int draaien() {
 		System.out.println("De attractie Spiegelpaleis draait!");
+		return this.aantalKeerGedraaid++;
+	}
+	public int getDraaien() {
+		return this.aantalKeerGedraaid;
 	}
 	
 }	

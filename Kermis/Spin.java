@@ -1,10 +1,11 @@
 package Kermis;
 
-public class Spin extends Attractie{
+public class Spin extends Attractie implements RisicoRijkeAttracties{
 	private String naam;
 	private double prijs = 2.25; 
 	double oppervlakte = 21;
 	int aantalKaartjes;
+	int aantalKeerGedraaid;
 	
 	public Spin() {
 		this.naam = "Spin";
@@ -25,7 +26,21 @@ public class Spin extends Attractie{
 		return this.aantalKaartjes;
 	}
 	
-	public void draaien() {
+	public int draaien() {
 		System.out.println("De attractie Spin draait!");
+		return this.aantalKeerGedraaid++;
+	}
+	
+	public boolean opstellingsKeuring() {
+		if (aantalKeerGedraaid == 5) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	
+	public int getDraaien() {
+		return this.aantalKeerGedraaid;
 	}
 }
