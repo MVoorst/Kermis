@@ -5,6 +5,7 @@ public class Ladderklimmen extends Attractie implements GokBelasting{
 	static double prijs = 5.00; 
 	double oppervlakte = 5;
 	int aantalKaartjes;
+	double opbrengst;
 	static double reservering;
 	int aantalKeerGedraaid;
 	
@@ -32,9 +33,12 @@ public class Ladderklimmen extends Attractie implements GokBelasting{
 		this.aantalKaartjes = aantalKaartjes + sk;
 		return this.aantalKaartjes;
 	}
+	
 	public double kansSpelBelastingBetalen() {
-		double reservering = Kassa.standVanZaken * 0.30;
+		double reservering = opbrengst -(opbrengst * 0.30);
+		this.opbrengst = opbrengst - reservering;
 		System.out.println(reservering);
+		System.out.println(this.opbrengst);
 		Kassa.reservering = reservering;
 		return this.reservering;
 	}

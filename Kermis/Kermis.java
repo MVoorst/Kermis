@@ -43,22 +43,9 @@ public class Kermis {
 		Kermis kermis = new Kermis();
 		int i = 0;
 		do {
-		kassa.menuKiezen(kermis,attracties);
-		if (((RisicoRijkeAttracties) attracties[1]).opstellingsKeuring() == true || ((RisicoRijkeAttracties) attracties[4]).opstellingsKeuring() == true) {
-			Scanner sc1 = new Scanner(System.in);
-			String monteur = sc1.nextLine();
-			System.out.println("Attractie heeft onderhoud nodig, druk op [m] om een monteur in te huren om de Spin en Hawaii te laten repareren.");
-			if (monteur == "m") {
-				((RisicoRijkeAttracties) attracties[1]).setAantalDraaien();
-				((RisicoRijkeAttracties) attracties[4]).setAantalDraaien();
-				System.out.println("Hawaii en Spin zijn weer klaar voor gebruik!");
-			}
-		}else {
 			kassa.menuKiezen(kermis,attracties);
-		
-		}
-		i++;
-		}while (i<100);
+			i++;
+		}while (i < 100);
 		
 	}
 }
