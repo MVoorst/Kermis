@@ -1,6 +1,7 @@
 package Kermis;
 
 public interface RisicoRijkeAttracties {
-	public boolean opstellingsKeuring();
+	public boolean opstellingsKeuring() ;
+	public int setAantalDraaien();
 
 }

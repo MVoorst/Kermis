@@ -32,15 +32,19 @@ public class Spin extends Attractie implements RisicoRijkeAttracties{
 	}
 	
 	public boolean opstellingsKeuring() {
-		if (aantalKeerGedraaid == 5) {
+		if (this.aantalKeerGedraaid > 0) {
 			return true;
 		}else {
 			return false;
 		}
-		
 	}
 	
 	public int getDraaien() {
+		return this.aantalKeerGedraaid;
+	}
+	
+	public int setAantalDraaien() {
+		this.aantalKeerGedraaid = 0;
 		return this.aantalKeerGedraaid;
 	}
 }

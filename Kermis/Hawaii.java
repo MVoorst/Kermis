@@ -30,14 +30,17 @@ public class Hawaii extends Attractie implements RisicoRijkeAttracties{
 	}
 	
 	public boolean opstellingsKeuring() {
-		if (aantalKeerGedraaid == 10) {
-			
+		if (this.aantalKeerGedraaid > 10) {
 			return true;
 		}else {
 			return false;
 		}
 	}
 	public int getDraaien() {
+		return this.aantalKeerGedraaid;
+	}
+	public int setAantalDraaien() {
+		this.aantalKeerGedraaid = 0;
 		return this.aantalKeerGedraaid;
 	}
 }
